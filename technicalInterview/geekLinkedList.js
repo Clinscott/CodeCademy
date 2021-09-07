@@ -1,6 +1,6 @@
 /*
 description:	Linked List creation from geeks for geeks.
-credit:		    GeeksforGeeks.
+credit:		    Sumit Ghosh at GeeksforGeeks.
 link:			https://www.geeksforgeeks.org/implementation-linkedlist-javascript/
 further:        Comments before methods provided by site. Comments in methods adapted for my better understanding.
 */
@@ -164,7 +164,47 @@ class linkedlist{
     If it is not present in the list it returns -1 instead.
     */
 
+    indexOf(element){
+        let count = 0;
+        let current = this.head;
 
+        //iterate through list
+        while (current !== null) {
+            if (current.element === element) {
+                return count;
+            }
+        count++
+        current = current.next;
+        }
+        //not found
+        return -1
+    }
 
+    /*
+    isEmpty() – it returns true if the list is empty. 
+    In this method we check for the size property of the LinkedList class, and if it’s zero then the list is empty. 
+    */
+   isEmpty(){
+       return this.size === 0;
+   }
 
+   /*
+   sizeOfList() – It returns the size of list  
+   */
+  sizeOfList(){
+      console.log(this.size);
+  }
+
+  /* printList() – It prints the contents of the list.
+  In this method, we iterate over the entire list and concatenate the elements of each node and print it. */
+
+  printList(){
+      let curr = this.head;
+      let string = "";
+      while (curr) {
+          str += `${curr.element} `;
+          curr = curr.next;
+        }
+        console.log(string);
+  }
 }
