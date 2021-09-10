@@ -2,7 +2,7 @@
 description:	A linked list function, not a class. Interesting way of developing it. 
 credit:			Samuel Robles over on Start It Up.
 link:			https://medium.com/swlh/how-to-create-a-linked-list-in-javascript-1bfef32c7722.
-further:		N/A.
+further:		A very good read.
 */
 
 const Node = function (value, next = null) {
@@ -110,6 +110,21 @@ LinkedList.prototype.removeNodeAt = function (index) {
     return;
 }
 
+LinkedList.prototype.clearList = function () {  
+    this.head = null;
+    this.size = 0;
+    return;
+}
+
+LinkedList.prototype.printValue = function () {
+    let current = this.head;
+    while (current) {
+        console.log(current.value);
+        current = current.next;
+    }
+}
+
 
 
 const linked_list = new LinkedList();
+export default linked_list;
