@@ -1,4 +1,4 @@
-const LinkedList = require("../LinkedList/singleList/linkedList")
+const LinkedList = require("../singleList/linkedList")
 
 /*
 description:	Queue work on codecademy.
